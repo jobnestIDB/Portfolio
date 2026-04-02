@@ -142,3 +142,39 @@ sessionStorage.setItem('scrollY', window.scrollY);
         sessionStorage.removeItem('fromGallery');
     }
 });
+
+
+/* ══ HORIZONTAL TIMELINE DRAG ═══════════════════ */
+
+const timelineTrack = document.getElementById("timelineTrack");
+
+if (timelineTrack) {
+  let isDown = false;
+  let startX;
+  let scrollLeft;
+
+  timelineTrack.addEventListener("mousedown", (e) => {
+    isDown = true;
+    timelineTrack.classList.add("dragging");
+    startX = e.pageX - timelineTrack.offsetLeft;
+    scrollLeft = timelineTrack.scrollLeft;
+  });
+
+  timelineTrack.addEventListener("mouseleave", () => {
+    isDown = false;
+    timelineTrack.classList.remove("dragging");
+  });
+
+  timelineTrack.addEventListener("mouseup", () => {
+    isDown = false;
+    timelineTrack.classList.remove("dragging");
+  });
+
+  timelineTrack.addEventListener("mousemove", (e) => {
+    if (!isDown) return;
+    e.preventDefault();
+    const x = e.pageX - timelineTrack.offsetLeft;
+    const walk = (x - startX) * 2; // speed
+    timelineTrack.scrollLeft = scrollLeft - walk;
+  });
+}
