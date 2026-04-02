@@ -568,6 +568,20 @@ h2.section-title {
 .venture-btn:hover {
   gap: 10px;
 }
+/* ROLE TAG (FOUNDER / CO-FOUNDER) */
+
+.venture-role {
+  display: inline-block;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold);
+  border: 1px solid rgba(184,151,90,0.35);
+  padding: 3px 8px;
+  margin-right: 6px;
+}
+
+
 /* ── JOURNEY SECTION (FINAL – HOVER FIX ONLY) ───────────────── */
 
 #journey {
