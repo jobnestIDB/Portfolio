@@ -164,3 +164,44 @@ if (timelineTrack) {
     timelineTrack.scrollLeft = scrollLeft - walk;
   });
 }
+
+/* ===== SETUP MARQUEE ===== */
+function setupMarquee(track) {
+  if (track.dataset.ready) return;
+
+  const parentWidth = track.parentElement.offsetWidth;
+
+  while (track.scrollWidth < parentWidth * 2) {
+    track.innerHTML += track.innerHTML;
+  }
+
+  track.dataset.ready = "true";
+}
+
+/* ===== INITIAL LOAD ===== */
+document.querySelectorAll('[data-marquee]').forEach(track => {
+  if (track.closest('.testimonial-set').classList.contains('active')) {
+    setupMarquee(track);
+    track.classList.add('animate');
+  }
+});
+
+/* ===== SWITCH TAB ===== */
+function switchTab(id){
+
+  document.querySelectorAll('.testimonial-set').forEach(s=>s.classList.remove('active'));
+  document.querySelectorAll('.testimonial-tabs button').forEach(b=>b.classList.remove('active'));
+
+  const activeSet = document.getElementById('set'+id);
+  activeSet.classList.add('active');
+  document.querySelectorAll('.testimonial-tabs button')[id-1].classList.add('active');
+
+  const track = activeSet.querySelector('[data-marquee]');
+  
+  setupMarquee(track);
+
+  // restart animation cleanly
+  track.classList.remove('animate');
+  void track.offsetWidth;
+  track.classList.add('animate');
+}

@@ -341,69 +341,58 @@
   </section>
 
   <!-- TESTIMONIALS -->
-  <section id="testimonials">
-    <span class="section-label">What people say</span>
-    <h2 class="section-title">Testimonials</h2>
+<section id="testimonials">
+
+  <span class="section-label">What people say</span>
+  <h2 class="section-title">Testimonials</h2>
+
+  <!-- TABS -->
+  <div class="testimonial-tabs">
+    <button class="active" onclick="switchTab(1)">Leadership</button>
+    <button onclick="switchTab(2)">Institutions</button>
+    <button onclick="switchTab(3)">Clients</button>
+    <button onclick="switchTab(4)">Events</button>
+  </div>
+
+  <!-- CATEGORY 1 -->
+  <div class="testimonial-set active" id="set1">
     <div class="marquee">
-      <div class="marquee-track" id="marqueeTrack">
-        <div class="t-card">
-          <p class="t-card-quote">"A visionary leader with unmatched execution capability. Chetan consistently
-            delivers outcomes that exceed expectations."</p>
-          <div class="t-card-author">
-            <div class="t-avatar">RK</div>
-            <div>
-              <div class="t-name">Rahul K.</div>
-              <div class="t-role">CEO, Tech Firm</div>
-            </div>
-          </div>
-        </div>
-        <div class="t-card">
-          <p class="t-card-quote">"Drives innovation while maintaining strong business fundamentals. A rare
-            combination in today's landscape."</p>
-          <div class="t-card-author">
-            <div class="t-avatar">AP</div>
-            <div>
-              <div class="t-name">Asha P.</div>
-              <div class="t-role">Business Partner</div>
-            </div>
-          </div>
-        </div>
-        <div class="t-card">
-          <p class="t-card-quote">"Consistently delivers results with clarity and structured execution. Highly
-            recommend working with him."</p>
-          <div class="t-card-author">
-            <div class="t-avatar">SM</div>
-            <div>
-              <div class="t-name">Suresh M.</div>
-              <div class="t-role">Client</div>
-            </div>
-          </div>
-        </div>
-        <div class="t-card">
-          <p class="t-card-quote">"The event he organized was seamless. His attention to detail and community
-            focus is what sets him apart."</p>
-          <div class="t-card-author">
-            <div class="t-avatar">PD</div>
-            <div>
-              <div class="t-name">Priya D.</div>
-              <div class="t-role">Event Participant</div>
-            </div>
-          </div>
-        </div>
-        <div class="t-card">
-          <p class="t-card-quote">"Working with Alpha Edge Edu transformed how our students approach learning.
-            Exceptional mentorship and guidance."</p>
-          <div class="t-card-author">
-            <div class="t-avatar">NJ</div>
-            <div>
-              <div class="t-name">Nisha J.</div>
-              <div class="t-role">College Coordinator</div>
-            </div>
-          </div>
-        </div>
+      <div class="marquee-track" data-marquee>
+        <div class="t-card"><p>"A visionary leader with unmatched execution capability."</p><div class="t-author"><div class="t-avatar">RK</div><div><div class="t-name">Rahul K.</div><div class="t-role">CEO</div></div></div></div>
+        <div class="t-card"><p>"Drives innovation with strong business fundamentals."</p><div class="t-author"><div class="t-avatar">AP</div><div><div class="t-name">Asha P.</div><div class="t-role">Director</div></div></div></div>
       </div>
     </div>
-  </section>
+  </div>
+
+  <!-- CATEGORY 2 -->
+  <div class="testimonial-set" id="set2">
+    <div class="marquee">
+      <div class="marquee-track" data-marquee>
+        <div class="t-card"><p>"Transformed student engagement through structured programs."</p><div class="t-author"><div class="t-avatar">NJ</div><div><div class="t-name">Nisha J.</div><div class="t-role">Coordinator</div></div></div></div>
+        <div class="t-card"><p>"Highly impactful academic initiatives."</p><div class="t-author"><div class="t-avatar">SR</div><div><div class="t-name">Suresh R.</div><div class="t-role">Dean</div></div></div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CATEGORY 3 -->
+  <div class="testimonial-set" id="set3">
+    <div class="marquee">
+      <div class="marquee-track" data-marquee>
+        <div class="t-card"><p>"Exceptional execution and delivery."</p><div class="t-author"><div class="t-avatar">SM</div><div><div class="t-name">Suresh M.</div><div class="t-role">Client</div></div></div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CATEGORY 4 -->
+  <div class="testimonial-set" id="set4">
+    <div class="marquee">
+      <div class="marquee-track" data-marquee>
+        <div class="t-card"><p>"The event was seamless and highly engaging."</p><div class="t-author"><div class="t-avatar">PD</div><div><div class="t-name">Priya D.</div><div class="t-role">Participant</div></div></div></div>
+      </div>
+    </div>
+  </div>
+
+</section>
 
   <!-- COLLABORATIONS -->
   <section id="collaborations">

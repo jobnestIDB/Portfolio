@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Journey Timeline</title>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=Cormorant+Garamond:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+
+/* ===== THEME (YOUR SITE MATCH) ===== */
+:root{
+  --bg:#1A1916;
+  --gold:#B8975A;
+  --white:#FAF9F6;
+  --muted:rgba(255,255,255,0.6);
+}
+
+body{
+  margin:0;
+  background:var(--bg);
+  font-family:'DM Sans', sans-serif;
+  color:var(--white);
+}
+
+/* SECTION */
+section{
+  padding:120px 40px;
+}
+
+.section-title{
+  font-family:'Cormorant Garamond';
+  font-size:48px;
+  margin-bottom:80px;
+}
+
+/* WRAPPER */
+.timeline-wrapper{
+  max-width:1200px;
+  margin:auto;
+  position:relative;
+}
+
+/* SVG */
+.timeline-svg{
+  width:100%;
+  height:500px;
+}
+
+/* LINE */
+.timeline-svg path{
+  stroke:var(--gold);
+  stroke-width:2;
+  fill:none;
+}
+
+/* CIRCLE */
+.node{
+  fill:var(--bg);
+  stroke:var(--gold);
+  stroke-width:2;
+  transition:0.3s;
+}
+
+.node:hover{
+  fill:var(--gold);
+}
+
+/* TEXT */
+.timeline-text{
+  position:absolute;
+  width:140px;
+  text-align:center;
+  transform:translateX(-50%);
+}
+
+.year{
+  font-size:13px;
+  color:var(--gold);
+  margin-bottom:4px;
+}
+
+.title{
+  font-family:'Cormorant Garamond';
+  font-size:18px;
+  margin-bottom:4px;
+}
+
+.desc{
+  font-size:12px;
+  color:var(--muted);
+  line-height:1.5;
+}
+
+/* MOBILE */
+@media(max-width:900px){
+  .timeline-svg{
+    display:none;
+  }
+
+  .timeline-text{
+    position:relative;
+    left:auto !important;
+    top:auto !important;
+    transform:none;
+    margin-bottom:30px;
+  }
+}
+@media(max-width:900px){
+
+  /* HIDE SVG */
+  .timeline-svg{
+    display:none;
+  }
+
+  .timeline-wrapper{
+    position:relative;
+    padding-left:30px;
+  }
+
+  /* VERTICAL LINE */
+  .timeline-wrapper::before{
+    content:'';
+    position:absolute;
+    left:10px;
+    top:0;
+    bottom:0;
+    width:2px;
+    background:var(--gold);
+  }
+
+  /* RESET TEXT BLOCK */
+  .timeline-text{
+    position:relative;
+    left:auto !important;
+    top:auto !important;
+    transform:none;
+    width:auto;
+    text-align:left;
+    margin-bottom:40px;
+    padding-left:25px;
+  }
+
+  /* DOT ON LINE */
+  .timeline-text::before{
+    content:'';
+    position:absolute;
+    left:-2px;
+    top:6px;
+    width:10px;
+    height:10px;
+    background:var(--bg);
+    border:2px solid var(--gold);
+    border-radius:50%;
+  }
+
+  .title{
+    font-size:16px;
+  }
+
+  .desc{
+    font-size:13px;
+  }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<section>
+
+<h2 class="section-title">Journey</h2>
+
+<div class="timeline-wrapper">
+
+<!-- SVG FLOW LINE -->
+<svg class="timeline-svg" viewBox="0 0 1200 500" preserveAspectRatio="none">
+
+  <path d="
+    M100 150 
+    C300 150, 300 150, 500 150
+    C700 150, 700 150, 900 150
+    C1100 150, 1100 300, 900 300
+    C700 300, 700 300, 500 300
+    C300 300, 300 420, 100 420
+  "/>
+
+  <!-- CIRCLES -->
+  <circle class="node" cx="100" cy="150" r="10"/>
+  <circle class="node" cx="300" cy="150" r="10"/>
+  <circle class="node" cx="500" cy="150" r="10"/>
+  <circle class="node" cx="700" cy="150" r="10"/>
+  <circle class="node" cx="900" cy="150" r="10"/>
+
+  <circle class="node" cx="900" cy="300" r="10"/>
+  <circle class="node" cx="700" cy="300" r="10"/>
+  <circle class="node" cx="500" cy="300" r="10"/>
+  <circle class="node" cx="300" cy="300" r="10"/>
+
+  <circle class="node" cx="100" cy="420" r="10"/>
+
+</svg>
+
+<!-- TEXT CONTENT -->
+
+<div class="timeline-text" style="left:100px; top:170px;">
+  <div class="year">2005</div>
+  <div class="title">Start</div>
+  <div class="desc">Career started with foundational exposure.</div>
+</div>
+
+<div class="timeline-text" style="left:300px; top:170px;">
+  <div class="year">2008</div>
+  <div class="title">Growth</div>
+  <div class="desc">Expanded role and responsibilities.</div>
+</div>
+
+<div class="timeline-text" style="left:500px; top:170px;">
+  <div class="year">2012</div>
+  <div class="title">Leadership</div>
+  <div class="desc">Handled teams and led initiatives.</div>
+</div>
+
+<div class="timeline-text" style="left:700px; top:170px;">
+  <div class="year">2015</div>
+  <div class="title">Expansion</div>
+  <div class="desc">Scaling and strategic execution phase.</div>
+</div>
+
+<div class="timeline-text" style="left:900px; top:170px;">
+  <div class="year">2018</div>
+  <div class="title">Major Role</div>
+  <div class="desc">Achieved key professional milestone.</div>
+</div>
+
+<div class="timeline-text" style="left:900px; top:320px;">
+  <div class="year">2020</div>
+  <div class="title">Shift</div>
+  <div class="desc">Strategic transformation phase.</div>
+</div>
+
+<div class="timeline-text" style="left:700px; top:320px;">
+  <div class="year">2021</div>
+  <div class="title">Innovation</div>
+  <div class="desc">Introduced new ideas and models.</div>
+</div>
+
+<div class="timeline-text" style="left:500px; top:320px;">
+  <div class="year">2022</div>
+  <div class="title">Scale</div>
+  <div class="desc">Expanded reach and execution.</div>
+</div>
+
+<div class="timeline-text" style="left:300px; top:320px;">
+  <div class="year">2023</div>
+  <div class="title">Impact</div>
+  <div class="desc">Community-driven outcomes.</div>
+</div>
+
+<div class="timeline-text" style="left:100px; top:440px;">
+  <div class="year">2024</div>
+  <div class="title">Now</div>
+  <div class="desc">Continuing growth and expansion.</div>
+</div>
+
+</div>
+
+</section>
+
+</body>
+</html>
