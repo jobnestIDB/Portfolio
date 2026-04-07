@@ -568,6 +568,7 @@ h2.section-title {
 .venture-btn:hover {
   gap: 10px;
 }
+
 /* ROLE TAG (FOUNDER / CO-FOUNDER) */
 
 .venture-role {
@@ -576,7 +577,7 @@ h2.section-title {
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--gold);
-  border: 1px solid rgba(184,151,90,0.35);
+  border: 1px solid rgba(184, 151, 90, 0.35);
   padding: 3px 8px;
   margin-right: 6px;
 }
@@ -751,7 +752,8 @@ h2.section-title {
 
 /* ── TESTIMONIALS ─────────────────────────────── */
 #testimonials {
-  background: var(--ink);   /* already defined as dark (#1A1916) */
+  background: var(--ink);
+  /* already defined as dark (#1A1916) */
   color: var(--white);
   padding: 100px 0;
   overflow: hidden;
@@ -782,7 +784,7 @@ h2.section-title {
 
 .testimonial-tabs button {
   padding: 8px 16px;
-  border: 1px solid rgba(255,255,255,0.2);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   background: transparent;
   color: var(--white);
   font-size: 12px;
@@ -843,8 +845,8 @@ h2.section-title {
   min-width: 320px;
   max-width: 340px;
   padding: 30px;
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.08);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .t-card p {
@@ -853,7 +855,7 @@ h2.section-title {
   font-size: 15px;
   line-height: 1.6;
   margin-bottom: 20px;
-  color: rgba(255,255,255,0.75);
+  color: rgba(255, 255, 255, 0.75);
 }
 
 .t-author {
@@ -866,7 +868,7 @@ h2.section-title {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background: rgba(184,151,90,0.2);
+  background: rgba(184, 151, 90, 0.2);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -881,22 +883,29 @@ h2.section-title {
 
 .t-role {
   font-size: 12px;
-  color: rgba(255,255,255,0.4);
+  color: rgba(255, 255, 255, 0.4);
 }
 
 /* ===== ANIMATION ===== */
 @keyframes scroll {
-  from { transform: translateX(0); }
-  to { transform: translateX(-100%); }
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
 }
 
 /* ===== HIDE ===== */
 .testimonial-set {
   display: none;
 }
+
 .testimonial-set.active {
   display: block;
 }
+
 /* ── COLLABORATIONS ───────────────────────────── */
 .collab-grid {
   display: grid;
@@ -957,7 +966,7 @@ h2.section-title {
 /* ── PAST WORK ───────────────────────────── */
 #pastwork {
   background: var(--bg2);
-  
+
 }
 
 .past-grid {
@@ -1337,7 +1346,11 @@ footer {
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Josefin+Sans:wght@300;400&display=swap');
 
 /* RESET */
-*{margin:0;padding:0;box-sizing:border-box;}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 #journey {
   background: var(--ink);
@@ -1349,128 +1362,132 @@ footer {
 }
 
 /* FULL WIDTH SECTION */
-.page{
-  
-  font-family:'Josefin Sans', sans-serif;
-  width:100%;
-  max-width:100%;
-  margin:auto;
-  padding:10px 20px;
+.page {
+
+  font-family: 'Josefin Sans', sans-serif;
+  width: 100%;
+  max-width: 100%;
+  margin: auto;
+  padding: 10px 20px;
 }
 
 /* MAKE SVG BIG */
-svg{
-  width:100%;
-  height:600px;   
-  display:block;
+svg {
+  width: 100%;
+  height: 600px;
+  display: block;
 }
-.mobile-timeline{
-  display:none;  
+
+.mobile-timeline {
+  display: none;
 }
 
 /* OPTIONAL: RESPONSIVE */
-@media(max-width:1200px){
-  svg{
-    height:650px;
+@media(max-width:1200px) {
+  svg {
+    height: 650px;
   }
 }
 
-@media(max-width:768px){
-  svg{
-    height:500px;
+@media(max-width:768px) {
+  svg {
+    height: 500px;
   }
 }
+
 /* ================= MOBILE TIMELINE ================= */
-@media(max-width:768px){
+@media(max-width:768px) {
 
-  svg{
-    height:auto;
+  svg {
+    height: auto;
   }
 
   /* hide complex desktop timeline */
-  svg{
-    display:none;
+  svg {
+    display: none;
   }
 
   /* mobile container */
-  .mobile-timeline{
-    display:block;
-    padding:20px 10px;
-    max-width:500px;
-    margin:auto;
+  .mobile-timeline {
+    display: block;
+    padding: 20px 10px;
+    max-width: 500px;
+    margin: auto;
   }
 
-  .mobile-item{
-    position:relative;
-    padding-left:40px;
-    margin-bottom:30px;
+  .mobile-item {
+    position: relative;
+    padding-left: 40px;
+    margin-bottom: 30px;
   }
 
   /* vertical line */
-  .mobile-item::before{
-    content:"";
-    position:absolute;
-    left:12px;
-    top:0;
-    width:2px;
-    height:100%;
-    background:#c9a55a;
-    opacity:0.5;
+  .mobile-item::before {
+    content: "";
+    position: absolute;
+    left: 12px;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background: #c9a55a;
+    opacity: 0.5;
   }
 
   /* dot */
-  .mobile-item::after{
-    content:"";
-    position:absolute;
-    left:6px;
-    top:5px;
-    width:12px;
-    height:12px;
-    border-radius:50%;
-    background:#c9a55a;
+  .mobile-item::after {
+    content: "";
+    position: absolute;
+    left: 6px;
+    top: 5px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #c9a55a;
   }
 
-  .m-year{
-    color:#c9a55a;
-    font-size:12px;
-    letter-spacing:2px;
+  .m-year {
+    color: #c9a55a;
+    font-size: 12px;
+    letter-spacing: 2px;
   }
 
-  .m-title{
-    font-family:'Cormorant Garamond';
-    font-size:18px;
-    color:#ede0c4;
+  .m-title {
+    font-family: 'Cormorant Garamond';
+    font-size: 18px;
+    color: #ede0c4;
   }
 
-  .m-desc{
-    font-size:14px;
-      color:#ede0c4;
-    line-height:1.5;
+  .m-desc {
+    font-size: 14px;
+    color: #ede0c4;
+    line-height: 1.5;
   }
-  .timeline-toggle{
-  color:#c9a55a;
-  text-align:center;
-  margin:20px 0;
-  cursor:pointer;
-  font-size:14px;
-  letter-spacing:1px;
-  border:1px solid rgba(201,165,90,0.3);
-  padding:10px;
-  border-radius:6px;
-}
 
-.hidden{
-  display:none;
-}
-.timeline-collapse{
-  color:#c9a55a;
-  text-align:center;
-  margin:30px 0 10px;
-  cursor:pointer;
-  font-size:14px;
-  letter-spacing:1px;
-  border:1px solid rgba(201,165,90,0.3);
-  padding:10px;
-  border-radius:6px;
-}
+  .timeline-toggle {
+    color: #c9a55a;
+    text-align: center;
+    margin: 20px 0;
+    cursor: pointer;
+    font-size: 14px;
+    letter-spacing: 1px;
+    border: 1px solid rgba(201, 165, 90, 0.3);
+    padding: 10px;
+    border-radius: 6px;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .timeline-collapse {
+    color: #c9a55a;
+    text-align: center;
+    margin: 30px 0 10px;
+    cursor: pointer;
+    font-size: 14px;
+    letter-spacing: 1px;
+    border: 1px solid rgba(201, 165, 90, 0.3);
+    padding: 10px;
+    border-radius: 6px;
+  }
 }
