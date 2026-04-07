@@ -130,40 +130,6 @@ sessionStorage.setItem('scrollY', window.scrollY);
 });
 
 
-/* ══ HORIZONTAL TIMELINE DRAG ═══════════════════ */
-
-const timelineTrack = document.getElementById("timelineTrack");
-
-if (timelineTrack) {
-  let isDown = false;
-  let startX;
-  let scrollLeft;
-
-  timelineTrack.addEventListener("mousedown", (e) => {
-    isDown = true;
-    timelineTrack.classList.add("dragging");
-    startX = e.pageX - timelineTrack.offsetLeft;
-    scrollLeft = timelineTrack.scrollLeft;
-  });
-
-  timelineTrack.addEventListener("mouseleave", () => {
-    isDown = false;
-    timelineTrack.classList.remove("dragging");
-  });
-
-  timelineTrack.addEventListener("mouseup", () => {
-    isDown = false;
-    timelineTrack.classList.remove("dragging");
-  });
-
-  timelineTrack.addEventListener("mousemove", (e) => {
-    if (!isDown) return;
-    e.preventDefault();
-    const x = e.pageX - timelineTrack.offsetLeft;
-    const walk = (x - startX) * 2; // speed
-    timelineTrack.scrollLeft = scrollLeft - walk;
-  });
-}
 
 /* ===== SETUP MARQUEE ===== */
 function setupMarquee(track) {
@@ -204,4 +170,25 @@ function switchTab(id){
   track.classList.remove('animate');
   void track.offsetWidth;
   track.classList.add('animate');
+}
+
+
+function toggleTimeline(){
+  const section = document.getElementById("moreTimeline");
+  const btn = document.querySelector(".timeline-toggle");
+
+  if(section.style.display === "block"){
+    section.style.display = "none";
+    btn.style.display = "block";
+
+    // 🔥 smooth scroll back to top of timeline
+    window.scrollTo({
+      top: document.querySelector(".mobile-timeline").offsetTop - 20,
+      behavior: "smooth"
+    });
+
+  } else {
+    section.style.display = "block";
+    btn.style.display = "none";
+  }
 }

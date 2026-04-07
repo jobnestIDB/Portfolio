@@ -76,7 +76,7 @@
         <img src="images/image-removebg-preview (1).png" alt="Chetan P Devanuru"
           onerror="this.outerHTML='<div class=\'hero-img-placeholder\'>CPD</div>'">
         <div class="hero-stat-strip">
-          <div class="h-stat"><span class="h-stat-num">3+</span><span class="h-stat-label">Ventures</span>
+          <div class="h-stat"><span class="h-stat-num">6+</span><span class="h-stat-label">Ventures</span>
           </div>
           <div class="h-stat"><span class="h-stat-num">1K+</span><span class="h-stat-label">Engaged</span>
           </div>
@@ -138,7 +138,7 @@
 
       <div class="venture-card">
         <div class="venture-num">05</div>
-        <h3>VelevateU</h3>
+        <h3>VElevateU</h3>
         <span class="venture-role">Founder</span>
         <p>A personal and professional development initiative focused on elevating individuals through mentorship,
           skills, and transformation programs.</p>
@@ -165,75 +165,355 @@
     </div>
   </section>
 
-  <!-- JOURNEY -->
-  <section id="journey">
+
+  <!-- Journey -->
+ <section id="journey">
+  <div class="page">
     <span class="section-label">The path so far</span>
     <h2 class="section-title">Journey</h2>
-    <div class="timeline-horizontal">
 
-  <div class="timeline-line"></div>
+<svg viewBox="0 0 1540 680" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+<defs>
+  <!-- Track gradient: fade at edges -->
+  <linearGradient id="trk" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox">
+    <stop offset="0%"   stop-color="#c9a55a" stop-opacity="0"/>
+    <stop offset="3%"   stop-color="#c9a55a" stop-opacity="0.9"/>
+    <stop offset="97%"  stop-color="#c9a55a" stop-opacity="0.9"/>
+    <stop offset="100%" stop-color="#c9a55a" stop-opacity="0"/>
+  </linearGradient>
 
-  <div class="timeline-track" id="timelineTrack">
+  <!-- Dot glow filter -->
+  <filter id="glow" x="-80%" y="-80%" width="260%" height="260%">
+    <feGaussianBlur stdDeviation="3" result="blur"/>
+    <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
 
-    <!-- ITEM -->
-    <div class="tl-card">
-      <div class="tl-year">2020</div>
-      <div class="tl-content">
-        <h4>Early Years</h4>
-        <p>Built strong fundamentals through education and early exploration.</p>
-        <span class="tl-tag">Foundation</span>
-      </div>
-    </div>
+  <!-- Subtle vignette for background -->
+  <radialGradient id="vig" cx="50%" cy="50%" r="70%">
+    <stop offset="0%"   stop-color="#1a1610" stop-opacity="0"/>
+    <stop offset="100%" stop-color="#070604" stop-opacity="0.7"/>
+  </radialGradient>
 
-    <div class="tl-card">
-      <div class="tl-year">2021</div>
-      <div class="tl-content">
-        <h4>Learning Phase</h4>
-        <p>Explored domains and business opportunities.</p>
-        <span class="tl-tag">Exploration</span>
-      </div>
-    </div>
+  <style>
+    .yr   { font-family:'Josefin Sans',sans-serif; font-size:12px; font-weight:400;
+            fill:#c9a55a; letter-spacing:0.18em; }
+    .name { font-family:'Cormorant Garamond',serif; font-size:21px; font-weight:600;
+            fill:#ede0c4; }
+    .desc { font-family:'Josefin Sans',sans-serif; font-size:10.5px; font-weight:300;
+            fill:#6b5c3e; letter-spacing:0.05em; line-height:1.6; }
+    .dot-outer { fill:#0d0b08; stroke:#c9a55a; stroke-width:1.5; }
+    .dot-inner { fill:#c9a55a; }
+    .ring      { fill:none; stroke:#c9a55a; stroke-width:0.8; opacity:0; }
+  </style>
+</defs>
 
-    <div class="tl-card">
-      <div class="tl-year">2022</div>
-      <div class="tl-content">
-        <h4>Alpha Edge Edu</h4>
-        <p>Founded education initiative focused on structured learning.</p>
-        <span class="tl-tag">First Venture</span>
-      </div>
-    </div>
 
-    <div class="tl-card">
-      <div class="tl-year">2024</div>
-      <div class="tl-content">
-        <h4>I Don't Blabber</h4>
-        <p>Co-founded marketing & tech agency.</p>
-        <span class="tl-tag">Co-Founder</span>
-      </div>
-    </div>
 
-    <div class="tl-card ">
-      <div class="tl-year">2025</div>
-      <div class="tl-content">
-        <h4>Thathaastu India</h4>
-        <p>Launched multi-sector platform.</p>
-        <span class="tl-tag">Flagship</span>
-      </div>
-    </div>
+<!-- track lines and bridge drawn AFTER dots so they render on top and stay visible -->
 
-    <div class="tl-card highlight">
-      <div class="tl-year">2026+</div>
-      <div class="tl-content">
-        <h4>Vision Forward</h4>
-        <p>Scaling ecosystems and impact.</p>
-        <span class="tl-tag">In Progress</span>
-      </div>
-    </div>
+<!-- ══════════════════════════════════════════════
+     HELPER: render a dot at (cx, cy)
+     Done inline for each position
+══════════════════════════════════════════════ -->
 
+<!-- ── TOP TRACK DOTS ── -->
+<!-- i=0  x=80    --> <g class="dot-group"><circle class="ring" cx="80"    cy="195" r="11"/><circle class="dot-outer" cx="80"    cy="195" r="5"/><circle class="dot-inner" cx="80"    cy="195" r="2"/></g>
+<!-- i=1  x=233.3 --> <g class="dot-group"><circle class="ring" cx="233.3" cy="195" r="11"/><circle class="dot-outer" cx="233.3" cy="195" r="5"/><circle class="dot-inner" cx="233.3" cy="195" r="2"/></g>
+<!-- i=2  x=386.7 --> <g class="dot-group"><circle class="ring" cx="386.7" cy="195" r="11"/><circle class="dot-outer" cx="386.7" cy="195" r="5"/><circle class="dot-inner" cx="386.7" cy="195" r="2"/></g>
+<!-- i=3  x=540   --> <g class="dot-group"><circle class="ring" cx="540"   cy="195" r="11"/><circle class="dot-outer" cx="540"   cy="195" r="5"/><circle class="dot-inner" cx="540"   cy="195" r="2"/></g>
+<!-- i=4  x=693.3 --> <g class="dot-group"><circle class="ring" cx="693.3" cy="195" r="11"/><circle class="dot-outer" cx="693.3" cy="195" r="5"/><circle class="dot-inner" cx="693.3" cy="195" r="2"/></g>
+<!-- i=5  x=846.7 --> <g class="dot-group"><circle class="ring" cx="846.7" cy="195" r="11"/><circle class="dot-outer" cx="846.7" cy="195" r="5"/><circle class="dot-inner" cx="846.7" cy="195" r="2"/></g>
+<!-- i=6  x=1000  --> <g class="dot-group"><circle class="ring" cx="1000"  cy="195" r="11"/><circle class="dot-outer" cx="1000"  cy="195" r="5"/><circle class="dot-inner" cx="1000"  cy="195" r="2"/></g>
+<!-- i=7  x=1153.3--> <g class="dot-group"><circle class="ring" cx="1153.3" cy="195" r="11"/><circle class="dot-outer" cx="1153.3" cy="195" r="5"/><circle class="dot-inner" cx="1153.3" cy="195" r="2"/></g>
+<!-- i=8  x=1306.7--> <g class="dot-group"><circle class="ring" cx="1306.7" cy="195" r="11"/><circle class="dot-outer" cx="1306.7" cy="195" r="5"/><circle class="dot-inner" cx="1306.7" cy="195" r="2"/></g>
+<!-- i=9  x=1460  --> <g class="dot-group"><circle class="ring" cx="1460"  cy="195" r="11"/><circle class="dot-outer" cx="1460"  cy="195" r="5"/><circle class="dot-inner" cx="1460"  cy="195" r="2"/></g>
+
+<!-- ── BOT TRACK DOTS ── -->
+<g class="dot-group"><circle class="ring" cx="80"    cy="485" r="11"/><circle class="dot-outer" cx="80"    cy="485" r="5"/><circle class="dot-inner" cx="80"    cy="485" r="2"/></g>
+<g class="dot-group"><circle class="ring" cx="233.3" cy="485" r="11"/><circle class="dot-outer" cx="233.3" cy="485" r="5"/><circle class="dot-inner" cx="233.3" cy="485" r="2"/></g>
+<g class="dot-group"><circle class="ring" cx="386.7" cy="485" r="11"/><circle class="dot-outer" cx="386.7" cy="485" r="5"/><circle class="dot-inner" cx="386.7" cy="485" r="2"/></g>
+<g class="dot-group"><circle class="ring" cx="540"   cy="485" r="11"/><circle class="dot-outer" cx="540"   cy="485" r="5"/><circle class="dot-inner" cx="540"   cy="485" r="2"/></g>
+<g class="dot-group"><circle class="ring" cx="693.3" cy="485" r="11"/><circle class="dot-outer" cx="693.3" cy="485" r="5"/><circle class="dot-inner" cx="693.3" cy="485" r="2"/></g>
+<g class="dot-group"><circle class="ring" cx="846.7" cy="485" r="11"/><circle class="dot-outer" cx="846.7" cy="485" r="5"/><circle class="dot-inner" cx="846.7" cy="485" r="2"/></g>
+<g class="dot-group"><circle class="ring" cx="1000"  cy="485" r="11"/><circle class="dot-outer" cx="1000"  cy="485" r="5"/><circle class="dot-inner" cx="1000"  cy="485" r="2"/></g>
+<g class="dot-group"><circle class="ring" cx="1153.3" cy="485" r="11"/><circle class="dot-outer" cx="1153.3" cy="485" r="5"/><circle class="dot-inner" cx="1153.3" cy="485" r="2"/></g>
+<g class="dot-group"><circle class="ring" cx="1306.7" cy="485" r="11"/><circle class="dot-outer" cx="1306.7" cy="485" r="5"/><circle class="dot-inner" cx="1306.7" cy="485" r="2"/></g>
+<g class="dot-group"><circle class="ring" cx="1460"  cy="485" r="11"/><circle class="dot-outer" cx="1460"  cy="485" r="5"/><circle class="dot-inner" cx="1460"  cy="485" r="2"/></g>
+
+<!-- ══════════════════════════════════════════════
+     TOP TRACK — ABOVE LINE (even indices i=0,2,4,6,8)
+     Labels hang upward; bottom of label block ≈ y=182
+     y layout from bottom up: desc2=170, desc1=157, name=138, yr=116
+══════════════════════════════════════════════ -->
+
+<!-- 2026 Vision  i=0  x=80 -->
+<text class="yr"   x="80"    y="110" text-anchor="middle">2026</text>
+<text class="name" x="80"    y="134" text-anchor="middle">Vision</text>
+<text class="desc" x="80"    y="152" text-anchor="middle">Scaling ecosystems</text>
+<text class="desc" x="80"    y="165" text-anchor="middle">&amp; long-term impact.</text>
+
+<!-- 2024 Agency  i=2  x=386.7 -->
+<text class="yr"   x="386.7" y="110" text-anchor="middle">2024</text>
+<text class="name" x="386.7" y="134" text-anchor="middle">Agency</text>
+<text class="desc" x="386.7" y="152" text-anchor="middle">Co-founded digital</text>
+<text class="desc" x="386.7" y="165" text-anchor="middle">growth agency.</text>
+
+<!-- 2022 Alpha Edge  i=4  x=693.3 -->
+<text class="yr"   x="693.3" y="110" text-anchor="middle">2022</text>
+<text class="name" x="693.3" y="134" text-anchor="middle">Alpha Edge</text>
+<text class="desc" x="693.3" y="152" text-anchor="middle">Education platform</text>
+<text class="desc" x="693.3" y="165" text-anchor="middle">launched.</text>
+
+<!-- 2020 Start  i=6  x=1000 -->
+<text class="yr"   x="1000"  y="110" text-anchor="middle">2020</text>
+<text class="name" x="1000"  y="134" text-anchor="middle">Start</text>
+<text class="desc" x="1000"  y="152" text-anchor="middle">Entrepreneurial journey</text>
+<text class="desc" x="1000"  y="165" text-anchor="middle">began.</text>
+
+<!-- 2018 Foundation  i=8  x=1306.7 -->
+<text class="yr"   x="1306.7" y="110" text-anchor="middle">2018</text>
+<text class="name" x="1306.7" y="134" text-anchor="middle">Foundation</text>
+<text class="desc" x="1306.7" y="152" text-anchor="middle">Built strong</text>
+<text class="desc" x="1306.7" y="165" text-anchor="middle">fundamentals.</text>
+
+<!-- ══════════════════════════════════════════════
+     TOP TRACK — BELOW LINE (odd indices i=1,3,5,7,9)
+     Labels hang downward; top of label block ≈ y=207
+     y layout: yr=210, name=234, desc1=252, desc2=265
+══════════════════════════════════════════════ -->
+
+<!-- 2025 Thathaastu  i=1  x=233.3 -->
+<text class="yr"   x="233.3" y="212" text-anchor="middle">2025</text>
+<text class="name" x="233.3" y="236" text-anchor="middle">Thathaastu</text>
+<text class="desc" x="233.3" y="254" text-anchor="middle">Multi-sector platform</text>
+<text class="desc" x="233.3" y="267" text-anchor="middle">launched.</text>
+
+<!-- 2023 Expansion  i=3  x=540 -->
+<text class="yr"   x="540"   y="212" text-anchor="middle">2023</text>
+<text class="name" x="540"   y="236" text-anchor="middle">Expansion</text>
+<text class="desc" x="540"   y="254" text-anchor="middle">Scaled initiatives</text>
+<text class="desc" x="540"   y="267" text-anchor="middle">and reach.</text>
+
+<!-- 2021 Exploration  i=5  x=846.7 -->
+<text class="yr"   x="846.7" y="212" text-anchor="middle">2021</text>
+<text class="name" x="846.7" y="236" text-anchor="middle">Exploration</text>
+<text class="desc" x="846.7" y="254" text-anchor="middle">Explored domains &amp;</text>
+<text class="desc" x="846.7" y="267" text-anchor="middle">opportunities.</text>
+
+<!-- 2019 Learning  i=7  x=1153.3 -->
+<text class="yr"   x="1153.3" y="212" text-anchor="middle">2019</text>
+<text class="name" x="1153.3" y="236" text-anchor="middle">Learning</text>
+<text class="desc" x="1153.3" y="254" text-anchor="middle">Focused on skill</text>
+<text class="desc" x="1153.3" y="267" text-anchor="middle">building.</text>
+
+<!-- 2017 Step  i=9  x=1460 -->
+<text class="yr"   x="1460"  y="212" text-anchor="middle">2017</text>
+<text class="name" x="1460"  y="236" text-anchor="middle">Step</text>
+<text class="desc" x="1460"  y="254" text-anchor="middle">Gained exposure and</text>
+<text class="desc" x="1460"  y="267" text-anchor="middle">confidence.</text>
+
+<!-- ══════════════════════════════════════════════
+     BOT TRACK — ABOVE LINE (between the two tracks)
+     Bot track reads right → left. Continuing from 2017:
+     Even years 2016,2014,2012,2010,2008 go ABOVE bot line
+     Placed at odd-indexed x positions (i=9,7,5,3,1) going right→left
+
+     y layout (above bot line y=485): yr=398, name=422, desc1=440, desc2=453
+══════════════════════════════════════════════ -->
+
+<!-- 2016 Growth  bot-i=9  x=1460 (right end of bot track) -->
+<text class="yr"   x="1460"  y="395" text-anchor="middle">2016</text>
+<text class="name" x="1460"  y="419" text-anchor="middle">Growth</text>
+<text class="desc" x="1460"  y="437" text-anchor="middle">Continuous</text>
+<text class="desc" x="1460"  y="450" text-anchor="middle">development.</text>
+
+<!-- 2014 Skills  bot-i=7  x=1153.3 -->
+<text class="yr"   x="1153.3" y="395" text-anchor="middle">2014</text>
+<text class="name" x="1153.3" y="419" text-anchor="middle">Skills</text>
+<text class="desc" x="1153.3" y="437" text-anchor="middle">Strengthened core</text>
+<text class="desc" x="1153.3" y="450" text-anchor="middle">skills.</text>
+
+<!-- 2012 Develop  bot-i=5  x=846.7 -->
+<text class="yr"   x="846.7" y="395" text-anchor="middle">2012</text>
+<text class="name" x="846.7" y="419" text-anchor="middle">Develop</text>
+<text class="desc" x="846.7" y="437" text-anchor="middle">Structured thinking</text>
+<text class="desc" x="846.7" y="450" text-anchor="middle">grew.</text>
+
+<!-- 2010 Early  bot-i=3  x=540 -->
+<text class="yr"   x="540"   y="395" text-anchor="middle">2010</text>
+<text class="name" x="540"   y="419" text-anchor="middle">Early</text>
+<text class="desc" x="540"   y="437" text-anchor="middle">Initial exposure.</text>
+
+<!-- 2008 Origin  bot-i=1  x=233.3 -->
+<text class="yr"   x="233.3" y="395" text-anchor="middle">2008</text>
+<text class="name" x="233.3" y="419" text-anchor="middle">Origin</text>
+<text class="desc" x="233.3" y="437" text-anchor="middle">Beginning of</text>
+<text class="desc" x="233.3" y="450" text-anchor="middle">journey.</text>
+
+<!-- ══════════════════════════════════════════════
+     BOT TRACK — BELOW LINE (odd years continuing)
+     Odd years 2015,2013,2011,2009 go BELOW bot line
+     Placed at even-indexed x positions (i=8,6,4,2) going right→left
+
+     y layout: yr=500, name=524, desc1=542, desc2=555
+══════════════════════════════════════════════ -->
+
+<!-- 2015 Shift  bot-i=8  x=1306.7 -->
+<text class="yr"   x="1306.7" y="500" text-anchor="middle">2015</text>
+<text class="name" x="1306.7" y="524" text-anchor="middle">Shift</text>
+<text class="desc" x="1306.7" y="542" text-anchor="middle">Direction clarity</text>
+<text class="desc" x="1306.7" y="555" text-anchor="middle">emerged.</text>
+
+<!-- 2013 Explore  bot-i=6  x=1000 -->
+<text class="yr"   x="1000"  y="500" text-anchor="middle">2013</text>
+<text class="name" x="1000"  y="524" text-anchor="middle">Explore</text>
+<text class="desc" x="1000"  y="542" text-anchor="middle">Explored interests.</text>
+
+<!-- 2011 Start  bot-i=4  x=693.3 -->
+<text class="yr"   x="693.3" y="500" text-anchor="middle">2011</text>
+<text class="name" x="693.3" y="524" text-anchor="middle">Start</text>
+<text class="desc" x="693.3" y="542" text-anchor="middle">Initial learning</text>
+<text class="desc" x="693.3" y="555" text-anchor="middle">phase.</text>
+
+<!-- 2009 Academics  bot-i=2  x=386.7 -->
+<text class="yr"   x="386.7" y="500" text-anchor="middle">2009</text>
+<text class="name" x="386.7" y="524" text-anchor="middle">Academics</text>
+<text class="desc" x="386.7" y="542" text-anchor="middle">Focused on basics.</text>
+
+<!-- ══════════════════════════════════════════════
+     DECORATIVE: subtle horizontal divider lines
+══════════════════════════════════════════════ -->
+<line x1="60" y1="90" x2="1480" y2="90" stroke="#c9a55a" stroke-width="0.3" opacity="0.12"/>
+<line x1="60" y1="572" x2="1480" y2="572" stroke="#c9a55a" stroke-width="0.3" opacity="0.12"/>
+
+<!-- ══════════════════════════════════════════════
+     TRACK LINES — drawn last so they sit ON TOP of dots
+     This makes the line clearly visible through every dot
+══════════════════════════════════════════════ -->
+<line x1="80" y1="195" x2="1460" y2="195" stroke="#c9a55a" stroke-width="1.2" opacity="0.85"/>
+<line x1="80" y1="485" x2="1460" y2="485" stroke="#c9a55a" stroke-width="1.2" opacity="0.85"/>
+
+<!-- Right-side bridge -->
+<path d="M 1460 195 C 1510 195, 1510 195, 1510 240 L 1510 440 C 1510 485, 1510 485, 1460 485"
+      fill="none" stroke="#c9a55a" stroke-width="1.2" opacity="0.7"/>
+
+</svg>
+<div class="mobile-timeline">
+
+  <!-- VISIBLE ITEMS -->
+  <div class="mobile-item">
+    <div class="m-year">2026</div>
+    <div class="m-title">Vision</div>
+    <div class="m-desc">Scaling ecosystems and long-term impact.</div>
   </div>
+
+  <div class="mobile-item">
+    <div class="m-year">2025</div>
+    <div class="m-title">Thathaastu</div>
+  </div>
+
+  <div class="mobile-item">
+    <div class="m-year">2024</div>
+    <div class="m-title">Agency</div>
+  </div>
+
+  <div class="mobile-item">
+    <div class="m-year">2023</div>
+    <div class="m-title">Expansion</div>
+  </div>
+
+  <!-- BUTTON -->
+  <div class="timeline-toggle" onclick="toggleTimeline()">
+    View Full Journey ↓
+  </div>
+
+  <!-- HIDDEN ITEMS -->
+  <div id="moreTimeline" class="hidden">
+
+    <div class="mobile-item">
+      <div class="m-year">2022</div>
+      <div class="m-title">Alpha Edge</div>
+    </div>
+
+    <div class="mobile-item">
+      <div class="m-year">2021</div>
+      <div class="m-title">Exploration</div>
+    </div>
+
+    <div class="mobile-item">
+      <div class="m-year">2020</div>
+      <div class="m-title">Start</div>
+    </div>
+
+    <div class="mobile-item">
+      <div class="m-year">2019</div>
+      <div class="m-title">Learning</div>
+    </div>
+
+    <div class="mobile-item">
+      <div class="m-year">2018</div>
+      <div class="m-title">Foundation</div>
+    </div>
+
+    <div class="mobile-item">
+      <div class="m-year">2017</div>
+      <div class="m-title">Step</div>
+    </div>
+
+    <div class="mobile-item">
+      <div class="m-year">2016</div>
+      <div class="m-title">Growth</div>
+    </div>
+
+    <div class="mobile-item">
+      <div class="m-year">2015</div>
+      <div class="m-title">Shift</div>
+    </div>
+
+    <div class="mobile-item">
+      <div class="m-year">2014</div>
+      <div class="m-title">Skills</div>
+    </div>
+
+    <div class="mobile-item">
+      <div class="m-year">2013</div>
+      <div class="m-title">Explore</div>
+    </div>
+
+    <div class="mobile-item">
+      <div class="m-year">2012</div>
+      <div class="m-title">Develop</div>
+    </div>
+
+    <div class="mobile-item">
+      <div class="m-year">2011</div>
+      <div class="m-title">Start</div>
+    </div>
+
+    <div class="mobile-item">
+      <div class="m-year">2010</div>
+      <div class="m-title">Early</div>
+    </div>
+
+    <div class="mobile-item">
+      <div class="m-year">2009</div>
+      <div class="m-title">Academics</div>
+    </div>
+
+    <div class="mobile-item">
+      <div class="m-year">2008</div>
+      <div class="m-title">Origin</div>
+    </div>
+   <!-- 🔥 NEW BOTTOM BUTTON -->
+  <div class="timeline-collapse" onclick="toggleTimeline()">
+    Show Less ↑
+  </div>
+  </div>
+
 </div>
-    
-  </section>
+</div>
+</section>
+
 
   <!-- EXPERTISE -->
   <section id="experience">
